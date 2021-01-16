@@ -9,8 +9,15 @@ export default class App extends Component {
     this.state = {
       numRows: 3,
       numCols: 3,
-      cellColor: "red",
+      cellColor: "",
     };
+  }
+
+  //Add rows to the grid:
+  addRows = () =>{
+    this.setState(
+      {numRows : this.state.numRows + 1}
+    )
   }
 
 
@@ -18,6 +25,14 @@ export default class App extends Component {
     return (
       <div className = "App">
         <h1>Manipulate the grid!</h1>
+
+        <div className = "buttons">
+          <button id="add-rows-btn" onClick={this.addRows}> ADD ROWS </button>
+        </div>
+
+
+
+
         {/* Where grid is stored. */}
         <Table
           numRows = {this.state.numRows}
