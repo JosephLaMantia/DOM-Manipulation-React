@@ -1,3 +1,8 @@
+.app {
+    display: flex;
+    justify-content: center;
+}
+
 body{
     background: linear-gradient(rgba(0, 0, 0, 0.5), 
                 rgba(0, 0, 0, 0.5)), 
@@ -28,8 +33,12 @@ td{
     color: "transparent";
 }
 
-button{
+.buttons {
+    display: flex;
+    justify-content: center;
+}
 
+button{
     display: inline-block;
     background-color: rgb(52, 149, 72);
     border: 3px solid black;

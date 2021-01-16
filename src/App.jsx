@@ -16,7 +16,14 @@ export default class App extends Component {
   //Add rows to the grid:
   addRows = () =>{
     this.setState(
-      {numRows : this.state.numRows + 1}
+      {numRows: this.state.numRows + 1}
+    )
+  }
+
+  //Add cols to the grid:
+  addCols = () =>{
+    this.setState(
+      {numCols: this.state.numCols + 1}
     )
   }
 
@@ -28,6 +35,7 @@ export default class App extends Component {
 
         <div className = "buttons">
           <button id="add-rows-btn" onClick={this.addRows}> ADD ROWS </button>
+          <button id="add-cols-btn" onClick={this.addCols}> ADD COLUMNS </button>
         </div>
 
 
