@@ -1,0 +1,85 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    background-color:beige;
+    color:rgb(42, 41, 41);
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    table-layout: auto;
+}
+
+td{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border-style: solid;
+    color: black;
+    background-color: transparent;
+}
+
+.cell {
+    color: "transparent";
+}
+
+button{
+    width: 10em;
+    height: 2em;
+    border-radius: 50px;
+    font-size: 14px;
+    margin: 10px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+#color-selection-panel{
+    display:flex;
+    margin-top: 1.5em;
+    align-items: center;
+}
+
+select{
+    width: 10em;
+    height: 2em;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+.red{
+    background-color: red
+}
+
+.blue{
+    background-color: blue
+}
+
+.green{
+    background-color: green
+}
+
+.yellow{
+    background-color: yellow
+}
+
+.orange{
+    background-color: orange
+}
+
+.purple{
+    background-color: purple
+}
+
+.pink{
+    background-color: pink
+}
+
+.brown{
+    background-color: brown
+}
