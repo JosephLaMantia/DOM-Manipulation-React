@@ -9,7 +9,7 @@ export default class App extends Component {
     this.state = {
       numRows: 3,
       numCols: 3,
-      cellColor: "",
+      cellColor: ""
     };
   }
 
@@ -27,6 +27,18 @@ export default class App extends Component {
     )
   }
 
+  //Select a color from a dropdown menu
+  selectColor=(event)=>{
+    this.setState(
+      {color: event.target.value}
+    )
+  }
+
+  //Change color when cell is clicked
+  handleClick=(event)=>{
+    event.target.style.backgroundColor = this.state.color;
+  }
+
 
   render(){
     return (
@@ -38,6 +50,13 @@ export default class App extends Component {
           <button id="add-cols-btn" onClick={this.addCols}> ADD COLUMNS </button>
         </div>
 
+        <div className = "color-select">
+          <select name="colors" id="color-select-dropdown" value={this.state.color} onChange={this.selectColor}>
+            <option value="rgb(28, 92, 41)">green</option>
+            <option value="gray">gray</option>
+            <option value="white">white</option>
+          </select>
+        </div>
 
 
 
@@ -45,7 +64,7 @@ export default class App extends Component {
         <Table
           numRows = {this.state.numRows}
           numCols = {this.state.numCols}
-          cellColor = {this.state.cellColor}
+          color = {this.state.color}
           handleClick = {this.handleClick}
         />
       </div>
