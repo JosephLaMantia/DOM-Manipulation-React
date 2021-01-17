@@ -43,13 +43,18 @@ export default class App extends Component {
   render(){
     return (
       <div className = "App">
-        <h1>Manipulate the grid!</h1>
 
+        {/* Welcome message */}
+        <h1>MANIPULATE THE GRID</h1>
+        <h3>Click a cell to change it to the selected color.</h3>
+
+        {/* Buttons */}
         <div className = "buttons">
-          <button id="add-rows-btn" onClick={this.addRows}> ADD ROWS </button>
-          <button id="add-cols-btn" onClick={this.addCols}> ADD COLUMNS </button>
+          <button id="add-rows-btn" onClick={this.addRows}> <h2>ADD ROWS</h2> </button>
+          <button id="add-cols-btn" onClick={this.addCols}> <h2>ADD COLUMNS</h2> </button>
         </div>
 
+        {/* Color select dropdown menu */}
         <div className = "color-select">
           <select name="colors" id="color-select-dropdown" value={this.state.color} onChange={this.selectColor}>
             <option value="rgb(28, 92, 41)">green</option>
@@ -57,8 +62,6 @@ export default class App extends Component {
             <option value="white">white</option>
           </select>
         </div>
-
-
 
         {/* Where grid is stored. */}
         <Table
